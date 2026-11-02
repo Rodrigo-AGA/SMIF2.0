@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"><link rel="stylesheet" href="css/styles.css"><title>Panel del profesor - Academia SMIF</title></head>
+<body class="bg-light" data-rol="docente">
+<nav class="navbar navbar-expand navbar-dark navbar-smif"><div class="container">
+  <a class="brand" href="docente.html">S<span>M</span>IF</a>
+  <ul class="navbar-nav me-auto ms-4">
+    <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+    <li class="nav-item"><a class="nav-link" href="#usuario">Usuario</a></li>
+    <li class="nav-item"><a class="nav-link" href="clases.html">Clases</a></li>
+    <li class="nav-item"><a class="nav-link" href="estudiantes.html">Estudiantes</a></li>
+    <li class="nav-item"><a class="nav-link" href="cursos.html">Cursos</a></li>
+  </ul>
+  <button id="logoutButton" class="btn btn-outline-light btn-sm">Cerrar sesión</button>
+</div></nav>
+
+<main class="container my-4">
+  <section id="inicio" class="d-flex align-items-center gap-3 mb-3 flex-wrap">
+    <h1 id="saludo" class="h2 fw-bold mb-0">Cargando...</h1>
+    <span id="rolBadge" class="badge fs-6 text-bg-secondary">...</span>
+  </section>
+
+  <div id="resumen" class="row g-3 mb-4"></div>
+
+  <section id="usuario" class="card shadow-sm mb-4"><div class="card-body">
+    <h2 class="h6 text-uppercase text-muted mb-3">Mis datos</h2>
+    <div class="row g-3">
+      <div class="col-sm-6"><small class="text-muted d-block">Nombre</small><span id="dNombre"></span></div>
+      <div class="col-sm-6"><small class="text-muted d-block">DNI</small><span id="dDni"></span></div>
+      <div class="col-sm-6"><small class="text-muted d-block">Correo</small><span id="dEmail"></span></div>
+      <div class="col-sm-6"><small class="text-muted d-block">Celular</small><span id="dCelular"></span></div>
+      <div class="col-sm-6"><small class="text-muted d-block">Especialidad</small><span id="dEspecialidad"></span></div>
+    </div>
+  </div></section>
+
+  <section id="clases" class="card shadow-sm mb-4"><div class="card-body">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h2 class="h6 text-uppercase text-muted mb-0">Mis clases</h2>
+      <a href="clases.html" class="btn btn-sm btn-smif-azul">Administrar clases y tareas</a>
+    </div>
+    <div class="table-responsive"><table class="table table-sm align-middle mb-0">
+      <thead><tr><th>Clase</th><th>Horario</th><th>Alumnos</th><th>Tareas</th></tr></thead>
+      <tbody id="tablaClasesDocente"><tr><td colspan="4">Cargando...</td></tr></tbody>
+    </table></div>
+  </div></section>
+
+  <div class="mb-4 d-flex gap-2 flex-wrap">
+    <a href="estudiantes.html" class="btn btn-smif-azul">Gestión de estudiantes</a>
+    <a href="cursos.html" class="btn btn-smif-azul">Gestión de cursos</a>
+    <a href="clases.html" class="btn btn-smif-azul">Mis clases y tareas</a>
+  </div>
+
+  <div id="secciones" class="row g-3"></div>
+  <div id="message" class="d-none"></div>
+</main>
+<script src="js/config.js"></script><script src="js/api.js"></script><script src="js/dashboard.js"></script>
+</body></html>

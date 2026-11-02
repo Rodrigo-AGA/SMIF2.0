@@ -1,0 +1,25 @@
+/* Personalización mínima sobre Bootstrap 5 */
+:root { --smif-azul:#0f2a5c; --smif-azul2:#1d4ed8; --smif-dorado:#f5b301; }
+.hidden { display:none !important; }
+
+.brand { font-weight:700; letter-spacing:3px; color:#fff; text-decoration:none; font-size:1.4rem; }
+.brand span { color:var(--smif-dorado); }
+.navbar-smif { background:var(--smif-azul); }
+.demo-banner { background:#fff3cd; color:#664d03; text-align:center; font-size:.8rem; padding:6px 10px; }
+
+.hero { background:linear-gradient(135deg,var(--smif-azul),var(--smif-azul2)); color:#fff; padding:90px 0; }
+.btn-smif { background:var(--smif-dorado); border-color:var(--smif-dorado); color:#1e293b; font-weight:600; }
+.btn-smif:hover { background:#e0a200; border-color:#e0a200; color:#1e293b; }
+
+.brand-lg { font-size:2rem; }
+.brand-dark { color:var(--smif-azul); }
+.split-left { background:linear-gradient(160deg,#2a52b8 0%,#1b3a9e 100%); align-items:center; justify-content:center;
+  border-top-right-radius:45% 60%; border-bottom-right-radius:45% 60%; padding:40px; }
+.split-left-content { max-width:420px; }
+.split-circle { width:190px; height:190px; border-radius:50%; margin:0 auto; background:rgba(255,255,255,.12);
+  border:3px solid rgba(255,255,255,.35); display:flex; align-items:center; justify-content:center; }
+.split-circle span { font-size:2.6rem; font-weight:800; letter-spacing:4px; color:var(--smif-dorado); }
+.btn-smif-azul { background:#1b3a9e; border-color:#1b3a9e; color:#fff; font-weight:600; }
+.btn-smif-azul:hover { background:#142d7c; border-color:#142d7c; color:#fff; }
+.form-control::placeholder { color:#9aa4b2; }
+.stat { font-size:2rem; font-weight:700; color:var(--smif-azul); }

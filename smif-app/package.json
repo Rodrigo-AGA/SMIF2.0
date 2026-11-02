@@ -1,0 +1,21 @@
+{
+  "name": "smif-app",
+  "version": "3.0.0",
+  "description": "Academia SMIF - aula virtual (Laboratorio 09: integración, pruebas y despliegue en la nube)",
+  "main": "app.js",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "test": "node tests/flujo.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "connect-pg-simple": "^10.0.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.22.3",
+    "express-session": "^1.18.0",
+    "pg": "^8.11.5"
+  }
+}

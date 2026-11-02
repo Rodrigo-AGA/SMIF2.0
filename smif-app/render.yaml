@@ -1,0 +1,28 @@
+# Blueprint de Render: crea la base PostgreSQL y el servicio web enlazados.
+databases:
+  - name: smif-db
+    databaseName: gestion_academica
+    user: smif
+    plan: free
+
+services:
+  - type: web
+    name: smif-app
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        fromDatabase:
+          name: smif-db
+          property: connectionString
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: ADMIN_KEY
+        sync: false        # se pide al crear el servicio (clave de secretaría)
+      - key: SEED_DEMO
+        value: "false"
